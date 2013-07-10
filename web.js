@@ -5,7 +5,7 @@ var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
   var fileToRead = "index.html";
-  var input = fs.readFileSync(fileToRead);
+  var input = fs.readFileSync(fileToRead).toString();
   //response.send('Hello World 2!');
   response.send(input);
 });
